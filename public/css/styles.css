@@ -1,12 +1,12 @@
+/* Estilos globales y reset */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    min-height: 100vh;
     margin: 0;
     transition: background-color 0.3s, color 0.3s;
-    color: #212529; /* Default text color in light mode */
+    color: #212529; /* Color de texto predeterminado en modo claro */
 }
 
+/* Estructura principal */
 .container {
     display: flex;
     width: 100%;
@@ -16,7 +16,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 150px; /* Fixed width */
+    width: 150px; /* Ancho fijo */
     height: 100vh;
     padding: 20px;
     background-color: #f8f9fa;
@@ -33,39 +33,28 @@ body {
     object-fit: cover;
 }
 
-.form-check {
-    margin-bottom: 20px;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    color: #212529;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-icons a {
-    color: #1e90ff;
-}
-
 .content {
-    margin-left: 250px; /* Should match aside width */
+    margin-left: 150px; /* Debe coincidir con el ancho de la barra lateral */
     padding: 20px;
     flex-grow: 1;
     overflow-y: auto;
 }
 
-h2 {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 5px;
-    transition: border-color 0.3s;
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Estilos de secciones específicas */
+.about,
+.technologies,
+.projects,
+.open-source {
+    padding: 40px; /* Espaciado aumentado para las secciones */
+}
+
+/* Componentes */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -87,9 +76,6 @@ h2 {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, background-color 0.3s, color 0.3s;
-}
-
-.card {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -113,6 +99,7 @@ h2 {
     transform: rotate(5deg);
 }
 
+/* Estilos de texto y modos */
 .dark-mode {
     background-color: #121212;
     color: #ffffff; /* Dark background with white text */
@@ -151,6 +138,7 @@ h2 {
     color: #ffffff !important; /* White text color in dark mode */
 }
 
+/* Cards específicos */
 .course-card {
     margin-bottom: 10px;
     padding: 10px;
@@ -181,6 +169,7 @@ h2 {
     color: #777;
 }
 
+/* Repos específicos */
 .repo-card {
     margin-bottom: 20px;
     padding: 15px;
@@ -213,6 +202,7 @@ h2 {
     margin-top: 5px;
 }
 
+/* Paginación */
 .pagination-container {
     margin-top: 20px;
     display: flex;
@@ -240,6 +230,7 @@ h2 {
     border-color: #0366d6;
 }
 
+/* Formulario de contacto */
 .contact-form {
     max-width: 500px;
     margin: 0 auto;
@@ -282,6 +273,47 @@ h2 {
     border-color: #555;
 }
 
+#typing-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Libros */
+.libro-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre las imágenes */
+    margin-top: 20px; /* Espacio superior entre el título y las imágenes */
+}
+
+.libro {
+    width: 200px; /* Ancho deseado para las imágenes */
+    height: auto; /* Altura automática para mantener la proporción */
+    cursor: pointer; /* Cambia el cursor al hacer hover sobre las imágenes */
+    padding: 8px;
+}
+
+/* Estilos adicionales */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #212529;
+    font-size: 1.5em;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a {
+    color: #1e90ff;
+}
+
+.form-check {
+    margin-bottom: 20px;
+}
+
+/* Estilos finales */
 .contact-form button {
     margin-top: 10px;
     padding: 10px;
@@ -297,17 +329,62 @@ h2 {
     background-color: #024ea2;
 }
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-mode .footer {
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
 .contact-form p {
     margin-top: 10px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .profile {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 10px;
+        box-shadow: none;
+        z-index: 0;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+
+
+.libro-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio entre las imágenes */
+    margin-top: 20px; /* Espacio superior entre el título y las imágenes */
+}
+
+.libro {
+    width: 200px; /* Ancho deseado para las imágenes */
+    height: 300px; /* Altura automática para mantener la proporción */
+    cursor: pointer; /* Cambia el cursor al hacer hover sobre las imágenes */
+    padding: 8px;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .libro-container {
+        flex-wrap: wrap; /* Envuelve las imágenes en pantallas pequeñas */
+        justify-content: center; /* Centra las imágenes */
+    }
+
+    .libro {
+        width: calc(50% - 16px); /* Ajusta el ancho de las imágenes al 50% del contenedor */
+        margin-bottom: 16px; /* Espacio entre las imágenes */
+    }
+}
+
+
+.dark-mode .contact-form {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #444;
 }

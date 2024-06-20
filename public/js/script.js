@@ -245,6 +245,25 @@ coursesList.forEach(course => {
 });
 
 
+const text = "Hay muchos libros, pero pocos tan claros..."; // El texto que quieres mostrar
+const typingElement = document.getElementById('typing-text');
+let index = 0;
 
+function type() {
+    if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100); // Ajusta la velocidad aquí (en milisegundos)
+    } else {
+        // Después de terminar de escribir, espera 30 segundos y vuelve a empezar
+        setTimeout(() => {
+            index = 0;
+            typingElement.textContent = '';
+            type();
+        }, 5000); 
+    }
+}
+
+type();
 
 });

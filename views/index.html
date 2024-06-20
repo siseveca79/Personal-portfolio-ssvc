@@ -19,12 +19,11 @@
             <h1 class="neo-color">Simon Velasquez</h1>
             <p class="neo-color">Valdivia - Chile</p>
             <p class="neo-color">Web Developer</p>
-            <p class="neo-color">Bootcamp</p>
-            <p class="neo-color">Pasión por el desarrollo web moderno</p>
+            <p class="neo-color">Pasión por el desarrollo web moderno y avanzado</p>
             <div class="social-icons">
-                <a href="mailto:youremail@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/yourusername/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:simonsebastianvelasquezcarcamo@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/siseveca79" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/simon-sebastian-velasquez-carcamo-a00491144/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         </aside>
 
@@ -45,7 +44,7 @@
             </section>
             
             <section class="projects">
-                <h2 class="neo-color">Logros</h2>
+                <h2 class="neo-color">Logros en GitGub</h2>
                 <div class="neo-color" id="github-repos">
                     <!-- Aquí se mostrarán los repositorios -->
                 </div>
@@ -56,32 +55,30 @@
             
             <section class="open-source">
                 <h2 class="neo-color">Lecturas recomendadas</h2>
-                <p class="neo-color">Hay muchos libros, pero pocos tan claros...</p>
-            </section >
-            <section class="form-contact">
-            <footer class="footer">
-               
-                    <form action="/submit-contact-form" method="POST" class="contact-form neo-color">
-                        <h3>Contact Me</h3>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-        
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-        
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-        
-                        <button type="submit">Send</button>
-                        <p class="form-message"></p>
-                    </form>
-                
-            </footer>
-        </section>
+                <p id="typing-text" class="neo-color"></p>
+            
+                <div class="libro-container">
+                    <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+                    <a href="https://eloquent-javascript-es.vercel.app/">
+                        <img src="/images/eloquent.jpg" alt="Libro" class="libro">
+                    </a>
+                    <a href="https://patterns.addy.ie/">
+                        <img src="/images/patrones-oreilly.jpg" alt="Libro" class="libro">
+                    </a>
+                    <a href="https://exploringjs.com/impatient-js/toc.html">
+                        <img src="/images/impatient.jpg" alt="Libro" class="libro">
+                    </a>
+                </div>
+            </section>
+            
+
+            
+            
         </main>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <script src="/js/script.js"></script>
+
     <script>
         document.querySelector('.contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Evitar el envío predeterminado del formulario
